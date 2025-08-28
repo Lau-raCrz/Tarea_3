@@ -1,0 +1,70 @@
+# Práctica en Linux - Paso a Paso
+
+## 1. Ir al directorio personal
+Se abrió la terminal y se cambió al directorio personal del usuario (`/home/[usuario]`) para trabajar desde la carpeta base donde se guardarán los archivos de la práctica.  
+Se comprobó la ubicación con `pwd` para confirmar que se estaba en el sitio correcto.
+
+---
+
+## 2. Listar archivos iniciales
+Se listaron los archivos y carpetas del directorio personal con `ls -l` para verificar el estado inicial y asegurarse de que no hubiera nombres conflictivos antes de crear la estructura de la práctica.
+
+---
+
+## 3. Crear la carpeta principal de la práctica
+Se creó una carpeta llamada `Practica_Linux` que servirá como contenedor del trabajo.  
+Luego se entró en esa carpeta para realizar todas las operaciones dentro de un entorno ordenado y aislado.
+
+---
+
+## 4. Crear subdirectorios
+Dentro de `Practica_Linux` se crearon dos subdirectorios llamados `Documentos` y `Backup`.  
+- **Documentos**: para el archivo principal.  
+- **Backup**: para guardar una copia de seguridad del mismo.
+
+---
+
+## 5. Crear y editar el archivo de texto
+En `Documentos` se creó un archivo vacío llamado `nota.txt` con `touch`.  
+Se abrió con el editor de texto `nano` y se escribió:  
+
+"Hola, este es mi primer archivo en Linux"
+
+
+Después se guardó y cerró el editor.
+
+---
+
+## 6. Copiar el archivo a la carpeta de respaldo
+Se hizo una copia de `nota.txt` en el directorio `Backup` para tener una copia de seguridad antes de modificar el archivo original.  
+Esto demuestra el uso de operaciones básicas de copia entre directorios (`cp`).
+
+---
+
+## 7. Renombrar el archivo original
+El archivo original en `Documentos` se renombró a `nota_final.txt` para reflejar que es la versión final del documento que se trabajó.  
+De esta forma, se mantiene un historial (la copia en `Backup`) y una versión final en `Documentos`.
+
+---
+
+## 8. Eliminar el directorio Backup
+Se volvió al directorio `Practica_Linux` y se eliminó la carpeta `Backup`.  
+- Si estaba vacía: `rmdir Backup`.  
+- Si contenía archivos: `rm -r Backup`.  
+
+Esto demuestra la diferencia entre eliminar directorios vacíos y no vacíos.
+
+---
+
+## 9. Mostrar el contenido del archivo final
+Se comprobó el contenido de `nota_final.txt` para verificar que la frase escrita estaba presente y correcta, usando `cat`.
+
+---
+
+## 10. Cambiar permisos del archivo
+Se modificaron los permisos de `nota_final.txt` para que sólo el propietario pudiese leer y escribir el archivo (equivalente a `rw-------`).  
+Esto se hizo con:  
+
+```bash
+chmod 600 nota_final.txt
+ls -l
