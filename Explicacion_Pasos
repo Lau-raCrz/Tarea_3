@@ -61,10 +61,4 @@ Se comprobó el contenido de `nota_final.txt` para verificar que la frase escrit
 
 ---
 
-## 10. Cambiar permisos del archivo
-Se modificaron los permisos de `nota_final.txt` para que sólo el propietario pudiese leer y escribir el archivo (equivalente a `rw-------`).  
-Esto se hizo con:  
-
-```bash
-chmod 600 nota_final.txt
-ls -l
+10. Cambiar permisos del archivo Se modificaron los permisos de nota_final.txt para que sólo el propietario pudiese leer y escribir el archivo (permisión equivalente a rw para el propietario y nada para grupo/otros). Luego se verificó el cambio observando la lista detallada con permisos. 11. Buscar y filtrar archivos Desde el directorio personal se buscó la ubicación de nota_final.txt para confirmar su ruta con una búsqueda por nombre. Además, se empleó una búsqueda de texto dentro de los archivos del directorio Documentos para encontrar la palabra “Linux”, demostrando cómo filtrar por contenido. 12. Gestión de procesos Se abrió el monitor de procesos del sistema (por ejemplo top) para observar procesos en ejecución y se salió de él. Después se creó un proceso en segundo plano con una tarea de espera (sleep) y se mató ese proceso usando su identificador (PID), mostrando cómo gestionar procesos en background y cómo terminarlos. 13. Actualización e instalación de paquetes Se actualizó la lista de paquetes del sistema y se instaló un programa sencillo (cowsay). Esto ilustra el uso de herramientas de gestión de paquetes para mantener el sistema y añadir utilidades. 14. Crear y ejecutar un script final Se creó un script llamado mis_comandos.sh con tres acciones: crear un directorio logs, guardar la salida de la fecha actual en un archivo dentro de logs (por ejemplo fecha.txt) y mostrar un mensaje de finalización utilizando cowsay. Al script se le dio permiso de ejecución y se ejecutó para comprobar que realiza las tres tareas solicitadas.
